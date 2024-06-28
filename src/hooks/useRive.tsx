@@ -224,6 +224,7 @@ export default function useRive(
   useEffect(() => {
     if (rive && animations) {
       if (rive.isPlaying) {
+        console.log('WHY CALL STOP BEFORE PLAY DAMN NOOBZ');
         rive.stop(rive.animationNames);
         rive.play(animations);
       } else if (rive.isPaused) {
